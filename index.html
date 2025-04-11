@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>E-commerce product page</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header container">
+
+    <div class="left_header">
+      <button type="button" class="burger_button" aria-label="Open-burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html"><img src="./images/logo.svg" alt="Sneakers Company logo" class="logo"></a>
+      <nav class="navi" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Collections</a></li>
+          <li><a href="index.html">Men</a></li>
+          <li><a href="index.html">Women</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="burger_cont">
+      <div class="burger_menu" role="navigation" aria-label="Mobile menu">
+        <button id="close" aria-label="Close menu">
+          <img src="./images/icon-close.svg" alt="" aria-hidden="true">
+        </button>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right_header">
+      <img src="./images/icon-cart.svg" alt="Cart" class="cart" tabindex="0" role="img" aria-label="Shoping cart">
+      <img src="./images/image-avatar.png" alt="Avatar" class="avatar" tabindex="0">
+    </div>
+
+  </header>
+  <main>
+    <div class="main_content">
+      <div class="img__block">
+        <div class="main_photo">
+          <img src="./images/image-product-1.jpg" alt="Main photo">
+          <button class="change_photo" id="previous" aria-label="Previous photo">
+            <img src="./images/icon-previous.svg" alt="" aria-hidden="true">
+          </button>
+          <button class="change_photo" id="next" aria-label="Next photo">
+            <img src="./images/icon-next.svg" alt="" aria-hidden="true">
+          </button>
+        </div>
+        <div class="small_photos">
+          <button type="button" aria-label="View first image">
+            <img class="small_item" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail of first product image">
+          </button>
+          <button type="button" aria-label="View second image">
+            <img class="small_item" src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail of second product image">
+          </button>
+          <button type="button" aria-label="View third image">
+            <img class="small_item" src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail of third product image">
+          </button>
+          <button type="button" aria-label="View fourth image">
+            <img class="small_item" src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail of fourth product image">
+          </button>
+        </div>
+      </div>
+
+      <div class="info__block">
+        <span class="company_name">Sneaker Company</span>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="item_description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price">
+          <div class="price_regular-block">
+            <span class="price-regular">$125.00</span>
+            <span class="discont">50%</span>
+          </div>
+          <span class="old_price">$250.00</span>
+        </div>
+        <div class="num_addToCart">
+          <div class="num_block" role="group" aria-label="Quantity selector">
+            <button class="minus" aria-label="Remove one">
+              <img src="./images/icon-minus.svg" alt="" aria-hidden="true">
+            </button>
+            <span class="number" aria-live="polite">0</span>
+            <button class="plus" aria-label="Add one">
+              <img src="./images/icon-plus.svg" alt="" aria-hidden="true">
+            </button>
+          </div>
+          <button type="button" class="button">
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+              <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#1D2026" fill-rule="nonzero"/>
+            </svg>
+            Add to cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  
+</body>
+</html>
