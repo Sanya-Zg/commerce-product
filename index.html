@@ -46,16 +46,34 @@
     </div>
 
     <div class="right_header">
-      <img src="./images/icon-cart.svg" alt="Cart" class="cart" tabindex="0" role="img" aria-label="Shoping cart">
-      <img src="./images/image-avatar.png" alt="Avatar" class="avatar" tabindex="0">
+      <button class="cart_icon" aria-label="Shopping cart" aria-expanded="false" aria-controls="cart_block">
+        <span class="items_num">0</span>
+        <img src="./images/icon-cart.svg" alt="" aria-hidden="true">
+      </button>
+
+      <!-- Cart -->
+      <div class="cart_block" id="cart_block">
+        <h4>Cart</h4>
+        <div class="cart__content">
+          
+        </div>
+      </div>
+
+      <button class="avatar" aria-label="User profile">
+        <img src="./images/image-avatar.png" alt="Avatar">
+      </button>
     </div>
 
   </header>
+
   <main>
     <div class="main_content">
+
       <div class="img__block">
         <div class="main_photo">
-          <img src="./images/image-product-1.jpg" alt="Main photo">
+          <button id="main_photo" aria-label="Main photo item">
+            <img src="./images/image-product-1.jpg" alt="" aria-hidden="true">
+          </button>
           <button class="change_photo" id="previous" aria-label="Previous photo">
             <img src="./images/icon-previous.svg" alt="" aria-hidden="true">
           </button>
@@ -96,7 +114,7 @@
             <button class="minus" aria-label="Remove one">
               <img src="./images/icon-minus.svg" alt="" aria-hidden="true">
             </button>
-            <span class="number" aria-live="polite">0</span>
+            <span class="number" aria-live="polite">1</span>
             <button class="plus" aria-label="Add one">
               <img src="./images/icon-plus.svg" alt="" aria-hidden="true">
             </button>
@@ -111,6 +129,42 @@
       </div>
 
     </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox_container">
+      <div class="lightbox_main-photo">
+        <img src="./images/image-product-1.jpg" alt="Lightbox main item photo">
+
+        <button type="button" class="lb_prev" aria-label="Previous item photo">
+          <svg class="abg" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+        <button type="button" class="lb_next" aria-label="Next item photo">
+          <svg class="abg" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+
+        <button type="button" class="lb_close" aria-label="Close lightbox">
+            <svg class="abg" width="20" height="20" viewBox="0 0 14 15" xmlns="http://www.w3.org/2000/svg">
+            <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#fff" fill-rule="evenodd"/>
+          </svg>
+        </button>
+
+      </div>
+      <div class="small_photos" id="small-lightbox">
+        <button type="button" aria-label="View first image">
+          <img class="lb_small" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail of first product image">
+        </button>
+        <button type="button" aria-label="View second image">
+          <img class="lb_small" src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail of second product image">
+        </button>
+        <button type="button" aria-label="View third image">
+          <img class="lb_small" src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail of third product image">
+        </button>
+        <button type="button" aria-label="View fourth image">
+          <img class="lb_small" src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail of fourth product image">
+        </button>
+      </div>
+    </div>
+
   </main>
   
 </body>

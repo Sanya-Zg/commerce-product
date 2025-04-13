@@ -75,7 +75,7 @@ body{
 .navi a{
     text-decoration: none;
     font-size: 15px;
-    padding: 12px 0 46px;
+    padding: 12px 0 43px;
     transition: color 0.3s ease;
     outline: none;
 }
@@ -94,15 +94,97 @@ body{
     align-items: center;
     gap: 48px;
     margin-left: 40px;
+    position: relative;
 }
-.cart{
+.cart_icon{
     cursor: pointer;
+    position: relative;
 }
+.items_num{
+    display: none;
+    position: absolute;
+    top: -6px;
+    left: 9px;
+    width: 19px;
+    height: 13px;
+    background-color: var(--Orange);
+    color: var(--White);
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 1px;
+}
+/* Cart */
+.cart_block {
+    position: absolute;
+    top: 65px;
+    left: -164px;
+    display: none;
+    flex-direction: column;
+    width: 360px;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 20px 50px 0px rgba(29, 32, 38, 0.1);
+}
+.cart_block.active{
+    display: flex;
+}
+h4{
+    margin: 24px 12px;
+    line-height: 26px;
+}
+.cart__content {
+    padding: 25px 24px;
+    border-top: 1px solid var(--Header-border);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-height: 182px;
+}
+.cart__content-info {
+    display: flex;
+    gap: 16px;
+}
+.img_cart {
+    width: 50px;
+    border-radius: 4px;
+}
+.cart__content-description {
+
+}
+.cart-price {
+
+}
+.cart-quantity {
+
+}
+.cart-sum {
+    font-weight: bold;
+    color: var(--Very-dark-blue);
+    margin-left: 10px;
+}
+.cart_delete-item {
+}
+.button_cart {
+    font-weight: bold;
+    padding: 20px 0;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--Orange);
+    transition: background-color 0.2s linear;
+}
+.button_cart:hover{
+    background-color: var(--Orange-hover);
+}
+
 .avatar {
     width: 50px;
     cursor: pointer;
     border-radius: 50%;
     border: 2px solid transparent;
+}
+.avatar img{
+    width: 100%;
 }
 .avatar:focus{
     border: 2px solid var(--Orange);
@@ -126,8 +208,12 @@ body{
 }
 .main_photo {
     width: 100%;
+    height: 448px;
 }
-.main_photo img{
+.main_photo button{
+    width: inherit;
+}
+.main_photo button img{
     width: inherit;
     border-radius: 15px;
 }
@@ -138,8 +224,28 @@ body{
     display: flex;
     gap: 32px;
 }
+.small_photos button{
+    width: 88px;
+    height: 88px;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+.small_photos button:focus img {
+    opacity: 0.25;
+  }
+.small_photos button:focus {
+    outline: 2px solid var(--Orange);
+    border-radius: 12px;
+}
+.small_photos img{
+    transition: opacity 0.2s linear;
+}
+.small_photos img:hover{
+    opacity: 0.5;
+}
 .small_item {
-    max-width: 88px;
+    max-width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 .info__block {
@@ -245,7 +351,7 @@ h1{
     display: flex;
     align-items: center;
     gap: 16px;
-    transition: background-color 0.3s linear;
+    transition: background-color 0.2s linear;
 }
 .button img{
     width: 17px;
@@ -259,7 +365,74 @@ h1{
     background-color: var(--Orange);
 }
 
-
+/* Lightbox */
+.lightbox_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.lightbox_container.active{
+    display: flex;
+}
+.lightbox_main-photo {
+    width: 30%;
+    height: auto;
+    position: relative;
+}
+.lightbox_main-photo img{
+    width: 100%;
+    border-radius: 15px;
+}
+.lb_prev, .lb_next{
+    position: absolute;
+    background-color: var(--White);
+    border-radius: 50%;
+    width: 11%;
+    height: 11%;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.lb_prev {
+    left: -6%;
+}
+.lb_next {
+    right: -6%;
+}
+.lb_prev:hover .abg path, .lb_next:hover .abg path{
+    stroke: var(--Orange);
+}
+.lb_close:hover .abg path{
+    fill: var(--Orange);
+}
+.lb_prev:active, .lb_next:active{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.lb_close {
+    position: absolute;
+    top:-43px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+}
+.lb_small{
+    width: 100%;
+    border-radius: 10px;
+}
+.lb_small.active {
+    border: 2px solid var(--Orange);
+    opacity: 0.7;
+  }
 
 
 @media (max-width: 920px) {
