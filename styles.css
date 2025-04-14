@@ -32,6 +32,9 @@ button{
     cursor: pointer;
     padding: 0;
 }
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
 body{
     font-family: "Kumbh Sans", sans-serif;
     background-color: var(--White);
@@ -340,6 +343,7 @@ h1{
 }
 .button {
     width: 272px;
+    height: 56px;
     background-color: var(--Orange);
     border-radius: 10px;
     font-weight: bold;
@@ -646,5 +650,20 @@ h1{
     .cart_block {
         left: -273px;
     }
-
+    .item_description{
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 16px ;
+    }
+    .price {
+        flex-direction: row;
+        gap: 0px;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    .num_addToCart{
+        flex-direction: column;
+        gap: 16px;
+    }
+    
 }
