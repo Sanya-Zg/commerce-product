@@ -2,6 +2,7 @@ const burgerBtn = document.querySelector('.burger_button');
 const burgerCont = document.querySelector('.burger_cont');
 const closeBM = document.getElementById('close');
 const mainPhoto = document.querySelector('#main_photo img');
+const mainPhotoBtn = document.querySelector('#main_photo');
 const miniPhotos = document.querySelectorAll('.small_item');
 const lightboxCont = document.querySelector('.lightbox_container');
 const closeLB = document.querySelector('.lb_close');
@@ -45,23 +46,26 @@ miniPhotos.forEach(image => {
 
 // Open lightbox
 
+const openLightbox = (e) => {
+  if (e.type === 'click' || e.key === 'Enter' || e.key === ' ') {
+    lightboxCont.classList.add('active');
+  }
+};
+
 const mediaQuery = window.matchMedia('(min-width: 769px)');
 
 function handleScreenChange(e) {
   if (e.matches) {
-    mainPhoto.addEventListener('click', () => {
-        lightboxCont.classList.add('active');
-    })
+    mainPhotoBtn.addEventListener('click', openLightbox);
+    mainPhotoBtn.addEventListener('keyup', openLightbox);
   } else {
-    mainPhoto.removeEventListener('click', () => {
-        lightboxCont.classList.add('active');
-    });
+    mainPhotoBtn.removeEventListener('click', openLightbox);
+    mainPhotoBtn.removeEventListener('keyup', openLightbox);
   }
 }
 
-mediaQuery.addEventListener('change', handleScreenChange);
-
 handleScreenChange(mediaQuery);
+mediaQuery.addEventListener('change', handleScreenChange);
 
 
 // Close lightbox
@@ -205,3 +209,4 @@ function deleteElement() {
         cartContent.innerHTML = '<p class="empty">Your cart is empty.</p>';
     }
 }
+
