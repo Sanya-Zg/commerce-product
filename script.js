@@ -154,8 +154,8 @@ function addToCart() {
             <div class="cart__content-description">
             <p>Fall Limited Edition Sneakers</p>
             <span class="cart-price">$125.00</span> x
-            <span class="cart-quantity">1</span>
-            <span class="cart-sum">125.00</span>
+            <span class="cart-quantity">${number.textContent}</span>
+            <span class="cart-sum"></span>
             </div>
             <button type="button" class="cart_delete-item" aria-label="Delete item from cart">
             <img src="./images/icon-delete.svg" alt="" aria-hidden="true">
